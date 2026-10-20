@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Canvas to Calendar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="popup">
+  <header>
+    <h1>Canvas to Calendar</h1>
+    <a href="#" id="open-options" title="Settings">Settings</a>
+  </header>
+
+  <p id="status" class="status">Loading…</p>
+
+  <ul id="tasks" class="tasks"></ul>
+
+  <div class="actions">
+    <button id="sync" class="primary">Add to Google Tasks</button>
+    <button id="ics">Download .ics</button>
+    <button id="refresh" class="ghost">Refresh</button>
+  </div>
+
+  <p id="last-sync" class="muted"></p>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Canvas to Calendar – Settings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="options">
+  <h1>Canvas to Calendar settings</h1>
+
+  <form id="form">
+    <fieldset>
+      <legend>Canvas</legend>
+      <label>
+        Canvas URL
+        <input name="canvasUrl" type="text" placeholder="https://yourschool.instructure.com" required>
+      </label>
+      <label>
+        Access token <span class="muted">(optional)</span>
+        <input name="canvasToken" type="password" autocomplete="off">
+        <small>Leave empty to use your logged-in Canvas session. To make one: Canvas → Account → Settings → “New Access Token”.</small>
+      </label>
+      <label>
+        Look ahead (days)
+        <input name="daysAhead" type="number" min="1" max="365">
+      </label>
+      <label class="check">
+        <input name="includeCompleted" type="checkbox">
+        Include submitted / completed tasks
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Google Tasks</legend>
+      <label>
+        Task list name
+        <input name="taskListName" type="text" placeholder="My Tasks">
+        <small>Created for you if it doesn't exist. Leave empty to use your default “My Tasks” list.</small>
+      </label>
+      <label class="check">
+        <input name="autoSync" type="checkbox">
+        Sync to Google Tasks automatically
+      </label>
+      <label>
+        Every (hours)
+        <input name="autoSyncHours" type="number" min="1" max="168">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>.ics download</legend>
+      <label>
+        Event length (minutes, ending at the due time)
+        <input name="eventMinutes" type="number" min="5" max="480">
+      </label>
+    </fieldset>
+
+    <button type="submit" class="primary">Save</button>
+    <span id="saved" class="muted"></span>
+  </form>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>

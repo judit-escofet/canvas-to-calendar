@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Canvas to Calendar",
+  "version": "1.0.0",
+  "description": "Fetches your upcoming Canvas assignments, quizzes and to-dos and adds them to your calendar.",
+  "permissions": ["storage", "identity", "alarms"],
+  "optional_host_permissions": ["https://*/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Canvas to Calendar",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "oauth2": {
+    "client_id": "YOUR_CLIENT_ID.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/tasks"]
+  }
+}
